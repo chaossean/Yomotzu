@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Agregar y quitar celdas</title>
+       
+    <style>
+        td, input {padding:5px;}
+    </style>
+<style type="text/css">
+.mytable  {border-collapse:collapse;border-spacing:0;border-color:#999;}
+.mytable td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
+.mytable th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
+.mytable .tcuerpo{background-color:#D2E4FC;text-align:center;vertical-align:top}
+.mytable .tencabezado{text-align:center;vertical-align:top}
+</style>
+    <script>
+
+        function myCreateFunction() {
+
+            var table = document.getElementById("myTable");
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1)
+            var cell3 = row.insertCell(2)
+            var cell4 = row.insertCell(3)
+            var cell5 = row.insertCell(4);
+            // CREO UN ELEMENTO DEL TIPO INPUT CON document.createElement("NOMBRE TAG HTML QUE QUIERO CREAR");
+
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.className = "Col1";
+            input.value = "Columna 1";
+            input.style.height = "20px";
+            input.style.width = "100px";
+
+            // Creo un segundo elemento Input
+
+
+            var input1 = document.createElement("input");
+            input1.type = "text";
+            input1.className = "Col2";
+            input1.value = "Columna 1";
+            input1.style.height = "20px";
+            input1.style.width = "100px";
+
+            // Creo un tercer elemento Input
+
+            var input2 = document.createElement("input");
+            input2.type = "text";
+            input2.className = "Col3";
+            input2.value = "Carro 1";
+            input2.style.height = "20px";
+            input2.style.width = "100px";
+
+            // Creo un Cuarto elemento Input
+
+            var input3 = document.createElement("input");
+            input3.type = "text";
+            input3.className = "Col4";
+            input3.value = "Moto 1";
+            input3.style.height = "20px";
+            input3.style.width = "100px";
+
+            // Creo un quinto elemento Input
+
+            var input4 = document.createElement("input");
+            input4.type = "text";
+            input4.className = "Col5";
+            input4.value = "Verga 1";
+            input4.style.height = "20px";
+            input4.style.width = "100px";
+
+            // Creo un Sexto elemento Input
+
+            var input5 = document.createElement("input");
+            input5.type = "text";
+            input5.className = "Col6";
+            input5.value = "Jarra 1";
+            input5.style.height = "20px";
+            input5.style.width = "100px";
+
+            // CON EL METODO appendChild(); LOS AGREGO A LA CELDA QUE QUIERO
+
+            cell1.appendChild(input);
+            cell2.appendChild(input2);
+            cell3.appendChild(input3);
+            cell4.appendChild(input4);
+            cell5.appendChild(input5);
+            
+
+            document.getElementById("input2").onFocus();
+
+        }
+
+            function myDeleteFunction() {
+            document.getElementById("myTable").deleteRow(0);
+        }
+    </script>
+</head>
+
+<body>
+
+    <!--table class="mytable1" id="myTable" border="0">
+
+    <tr>
+    <th class="tencabezado">Descripcion del producto</th>
+    <th class="tencabezado">Cantidad</th>
+    <th class="tencabezado">Precio Unit.</th>
+    <th class="tencabezado">Impuesto</th>
+    <th class="tencabezado">Subtotal</th>
+    </tr>
+    </table-->
+
+    <table class="mytable" id="myTable" border="0">
+        
+    <tr>
+    <th class="tencabezado">Descripcion del producto</th>
+    <th class="tencabezado">Cantidad</th>
+    <th class="tencabezado">Precio Unit.</th>
+    <th class="tencabezado">Impuesto</th>
+    <th class="tencabezado">Subtotal</th>
+    </tr>
+    </table>
+    <button id="Bot" onclick="myCreateFunction()" type="button">+</button>
+    <button onclick="myDeleteFunction()" type="button">-</button>
+
+</body>
+
+</html> 
